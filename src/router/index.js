@@ -3,7 +3,7 @@ import VueRouter from "vue-router";
 import Layout from "@/views/Layout/index.vue";
 import Home from "@/views/Home/index.vue";
 import ListAssign from "@/views/ListAssign/index.vue";
-import NowAssign from "@/views/NowAssign/index.vue";
+import SubmitTestingData from "@/views/SubmitTestingData/index.vue";
 
 Vue.use(VueRouter);
 
@@ -24,9 +24,9 @@ const routes = [
         component: ListAssign,
       },
       {
-        path: "/NowAssign",
-        name: "NowAssign",
-        component: NowAssign,
+        path: "/SubmitTestingData",
+        name: "SubmitTestingData",
+        component: SubmitTestingData,
       },
     ],
   },

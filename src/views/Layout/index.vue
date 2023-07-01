@@ -19,7 +19,7 @@
             <span slot="title">查看委派信息</span>
           </el-menu-item>
 
-          <el-menu-item index="3" @click="toNowAssign">
+          <el-menu-item index="3" @click="toSubmitTestingData">
             <i class="el-icon-setting"></i>
             <span slot="title">目前正在执行的委派</span>
           </el-menu-item>
@@ -70,8 +70,8 @@ export default {
         }
       });
     },
-    toNowAssign() {
-      this.$router.push("/NowAssign").catch((error) => {
+    toSubmitTestingData() {
+      this.$router.push("/SubmitTestingData").catch((error) => {
         if (error.name !== "NavigationDuplicated") {
           throw error;
         } else {

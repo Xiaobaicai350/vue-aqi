@@ -1,5 +1,5 @@
 <template>
-  <h1>NowAssign</h1>
+  <h1>SubmitTestingData</h1>
 </template>
 
 <script>

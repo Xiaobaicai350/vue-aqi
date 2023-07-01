@@ -21,7 +21,7 @@
 
           <el-menu-item index="3" @click="toSubmitTestingData">
             <i class="el-icon-setting"></i>
-            <span slot="title">目前正在执行的委派</span>
+            <span slot="title">上传监测数据</span>
           </el-menu-item>
         </el-menu>
       </el-aside>

@@ -14,18 +14,14 @@
             <span slot="title">首页</span>
           </el-menu-item>
 
-          <el-menu-item index="2" @click="toListExInformation">
+          <el-menu-item index="2" @click="toListAssign">
             <i class="el-icon-document"></i>
-            <span slot="title">查看异常信息</span>
+            <span slot="title">查看委派信息</span>
           </el-menu-item>
 
-          <el-menu-item index="3" @click="toListTesting">
+          <el-menu-item index="3" @click="toNowAssign">
             <i class="el-icon-setting"></i>
-            <span slot="title">查看检测数据</span>
-          </el-menu-item>
-          <el-menu-item index="4" @click="toListAssign">
-            <i class="el-icon-location"></i>
-            <span slot="title">查看委派信息</span>
+            <span slot="title">目前正在执行的委派</span>
           </el-menu-item>
         </el-menu>
       </el-aside>
@@ -40,7 +36,7 @@
               <el-dropdown-item>删除</el-dropdown-item>
             </el-dropdown-menu>
           </el-dropdown>
-          <span>管理员名字</span>
+          <span>aqi检测员的名字</span>
         </el-header>
         <!-- 一个分割线 -->
         <el-divider></el-divider>
@@ -65,27 +61,17 @@ export default {
         }
       });
     },
-    toListExInformation() {
-      console.log("hhhh");
-      this.$router.push("/ListExInformation").catch((error) => {
-        if (error.name !== "NavigationDuplicated") {
-          throw error;
-        } else {
-          console.log("Navigation duplicated");
-        }
-      });
-    },
-    toListTesting() {
-      this.$router.push("/ListTesting").catch((error) => {
-        if (error.name !== "NavigationDuplicated") {
-          throw error;
-        } else {
-          console.log("Navigation duplicated");
-        }
-      });
-    },
     toListAssign() {
       this.$router.push("/ListAssign").catch((error) => {
+        if (error.name !== "NavigationDuplicated") {
+          throw error;
+        } else {
+          console.log("Navigation duplicated");
+        }
+      });
+    },
+    toNowAssign() {
+      this.$router.push("/NowAssign").catch((error) => {
         if (error.name !== "NavigationDuplicated") {
           throw error;
         } else {

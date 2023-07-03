@@ -17,12 +17,13 @@ export const listAssigned = () => {
 };
 
 // 获取委派给每个检测员的异常信息
-export const listAssignedInfo = () => {
+export const listMyAssignedInfo = () => {
   return request({
-    url: "/admin",
+    url: "/staff",
     method: "GET",
   });
 };
+
 //aqi人员登录
 export const login = ({ id, password }) => {
   return request({

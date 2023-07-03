@@ -1,12 +1,5 @@
 // 封装管理员相关接口
 import request from "@/utils/http";
-// 获取委派给每个检测员的异常信息
-export const listMyAssignedInfo = () => {
-  return request({
-    url: "/staff",
-    method: "GET",
-  });
-};
 
 //aqi人员登录
 export const login = ({ id, password }) => {
@@ -17,6 +10,14 @@ export const login = ({ id, password }) => {
       id,
       password,
     },
+  });
+};
+
+// 获取委派给每个检测员的异常信息
+export const listMyAssignedInfo = () => {
+  return request({
+    url: "/staff",
+    method: "GET",
   });
 };
 
@@ -35,17 +36,18 @@ export const postTesting = ({ taskNumber, date, PM, SO2, CO }) => {
   });
 };
 
-//获取aqi的信息
-export const info = () => {
-  return request({
-    url: "/staff/info",
-    method: "GET",
-  });
-};
 //获取自己已经完成的信息
 export const listAllDo = () => {
   return request({
     url: "/staff/alldo",
+    method: "GET",
+  });
+};
+
+//获取aqi的信息
+export const info = () => {
+  return request({
+    url: "/staff/info",
     method: "GET",
   });
 };

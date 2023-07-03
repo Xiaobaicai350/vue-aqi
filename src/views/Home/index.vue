@@ -13,7 +13,8 @@ export default {
       var myChart = this.$echarts.init(document.getElementById("main"));
 
       // 指定图表的配置项和数据
-      var option = {
+      var option;
+      option = {
         title: {
           text: "AQI检测员检测数量",
         },

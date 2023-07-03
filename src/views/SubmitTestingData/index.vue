@@ -2,14 +2,14 @@
   <div>
     <el-form ref="form" :model="form" label-width="200px">
       <el-form-item label="任务编号">
-        <el-input v-model="form.taskNumber"></el-input>
+        <el-input v-model="form.ExmessageId"></el-input>
       </el-form-item>
       <el-form-item label="检测日期">
         <el-col :span="11">
           <el-date-picker
             type="date"
             placeholder="选择日期"
-            v-model="form.date"
+            v-model="form.updateTime"
             style="width: 100%"
           ></el-date-picker>
         </el-col>
@@ -47,8 +47,8 @@ export default {
   data() {
     return {
       form: {
-        taskNumber: "",
-        date: "",
+        ExmessageId: null,
+        updateTime: "",
         PM: null,
         SO2: null,
         CO: null,
@@ -57,6 +57,15 @@ export default {
   },
   methods: {
     async onSubmit() {
+      const date = new Date(this.form.updateTime);
+      const year = date.getUTCFullYear();
+      const month = ("0" + (date.getUTCMonth() + 1)).slice(-2);
+      const day = ("0" + date.getUTCDate()).slice(-2);
+      const hours = ("0" + date.getUTCHours()).slice(-2);
+      const minutes = ("0" + date.getUTCMinutes()).slice(-2);
+      const seconds = ("0" + date.getUTCSeconds()).slice(-2);
+      this.form.updateTime = `${year}-${month}-${day} ${hours}:${minutes}:${seconds}`;
+
       const data = await postTesting(this.form);
       console.log(data);
       console.log("submit!");

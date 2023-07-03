@@ -26,8 +26,8 @@ export const postTesting = ({ taskNumber, date, PM, SO2, CO }) => {
     url: "/staff/do",
     method: "POST",
     data: {
-      taskNumber,
-      date,
+      ExmessageId,
+      updateTime,
       PM,
       SO2,
       CO,

@@ -24,6 +24,7 @@ export default {
       data.data[i].updateTime = data.data[i].updateTime.substring(0, 19);
     }
     this.tableData = data.data;
+    console.log(this.tableData);
   },
 };
 </script>

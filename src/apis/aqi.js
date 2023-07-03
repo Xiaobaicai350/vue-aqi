@@ -23,7 +23,7 @@ export const login = ({ id, password }) => {
 //提交检测数据
 export const postTesting = ({ taskNumber, date, PM, SO2, CO }) => {
   return request({
-    url: "/staff/login",
+    url: "/staff/do",
     method: "POST",
     data: {
       taskNumber,

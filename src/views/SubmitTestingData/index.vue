@@ -60,6 +60,15 @@ export default {
       const data = await postTesting(this.form);
       console.log(data);
       console.log("submit!");
+      this.open1();
+      this.form = {};
+    },
+    open1() {
+      this.$notify({
+        title: "成功",
+        message: "恭喜您上传成功啦",
+        type: "success",
+      });
     },
   },
 };

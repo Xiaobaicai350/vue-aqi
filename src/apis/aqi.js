@@ -35,10 +35,17 @@ export const postTesting = ({ taskNumber, date, PM, SO2, CO }) => {
   });
 };
 
-//提交检测数据
+//获取aqi的信息
 export const info = () => {
   return request({
     url: "/staff/info",
+    method: "GET",
+  });
+};
+//获取自己已经完成的信息
+export const listAllDo = () => {
+  return request({
+    url: "/staff/alldo",
     method: "GET",
   });
 };

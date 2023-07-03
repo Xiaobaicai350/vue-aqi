@@ -4,6 +4,7 @@ import Layout from "@/views/Layout/index.vue";
 import Home from "@/views/Home/index.vue";
 import ListAssign from "@/views/ListAssign/index.vue";
 import SubmitTestingData from "@/views/SubmitTestingData/index.vue";
+import Login from "@/views/Login/index.vue";
 
 Vue.use(VueRouter);
 
@@ -29,6 +30,12 @@ const routes = [
         component: SubmitTestingData,
       },
     ],
+  },
+
+  {
+    path: "/Login",
+    name: "Login",
+    component: Login,
   },
 ];
 

@@ -2,20 +2,14 @@
   <div>
     <el-form ref="form" :model="form" label-width="200px">
       <el-form-item label="任务编号">
-        <el-input v-model="form.name"></el-input>
-      </el-form-item>
-      <el-form-item label="检测区域">
-        <el-select v-model="form.region" placeholder="请选择检测区域">
-          <el-option label="区域一" value="shanghai"></el-option>
-          <el-option label="区域二" value="beijing"></el-option>
-        </el-select>
+        <el-input v-model="form.taskNumber"></el-input>
       </el-form-item>
       <el-form-item label="检测日期">
         <el-col :span="11">
           <el-date-picker
             type="date"
             placeholder="选择日期"
-            v-model="form.date1"
+            v-model="form.date"
             style="width: 100%"
           ></el-date-picker>
         </el-col>
@@ -48,18 +42,13 @@
 
 <style></style>
 <script>
+import { postTesting } from "@/apis/aqi.js";
 export default {
   data() {
     return {
       form: {
-        name: "",
-        region: "",
-        date1: "",
-        date2: "",
-        delivery: false,
-        type: [],
-        resource: "",
-        desc: "",
+        taskNumber: "",
+        date: "",
         PM: null,
         SO2: null,
         CO: null,
@@ -67,7 +56,9 @@ export default {
     };
   },
   methods: {
-    onSubmit() {
+    async onSubmit() {
+      const data = await postTesting(this.form);
+      console.log(data);
       console.log("submit!");
     },
   },

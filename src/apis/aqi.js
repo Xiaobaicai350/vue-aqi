@@ -1,21 +1,5 @@
 // 封装管理员相关接口
 import request from "@/utils/http";
-
-// 获取所有异常信息
-export const listAllUnassignedExInfo = () => {
-  return request({
-    url: "/admin",
-    method: "GET",
-  });
-};
-// 获取所有异常信息
-export const listAssigned = () => {
-  return request({
-    url: "/admin/getMessage",
-    method: "GET",
-  });
-};
-
 // 获取委派给每个检测员的异常信息
 export const listMyAssignedInfo = () => {
   return request({
@@ -32,6 +16,21 @@ export const login = ({ id, password }) => {
     data: {
       id,
       password,
+    },
+  });
+};
+
+//提交检测数据
+export const postTesting = ({ taskNumber, date, PM, SO2, CO }) => {
+  return request({
+    url: "/staff/login",
+    method: "POST",
+    data: {
+      taskNumber,
+      date,
+      PM,
+      SO2,
+      CO,
     },
   });
 };

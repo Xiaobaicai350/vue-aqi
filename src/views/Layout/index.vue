@@ -36,7 +36,7 @@
               <el-dropdown-item>删除</el-dropdown-item>
             </el-dropdown-menu>
           </el-dropdown>
-          <span>aqi检测员的名字</span>
+          <span>{{ this.AQIInfo.name }}</span>
         </el-header>
         <!-- 一个分割线 -->
         <el-divider></el-divider>
@@ -50,6 +50,7 @@
 </template>
 
 <script>
+import { info } from "@/apis/aqi.js";
 export default {
   methods: {
     toHome() {
@@ -86,6 +87,15 @@ export default {
     handleClose(key, keyPath) {
       console.log(key, keyPath);
     },
+  },
+  async mounted() {
+    const data = await info();
+    this.AQIInfo = data.data;
+  },
+  data() {
+    return {
+      AQIInfo: {},
+    };
   },
 };
 </script>

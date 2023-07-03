@@ -23,6 +23,10 @@
             <i class="el-icon-setting"></i>
             <span slot="title">上传监测数据</span>
           </el-menu-item>
+          <el-menu-item index="4" @click="toAllDo">
+            <i class="el-icon-setting"></i>
+            <span slot="title">查看您已完成的检测信息</span>
+          </el-menu-item>
         </el-menu>
       </el-aside>
 
@@ -73,6 +77,15 @@ export default {
     },
     toSubmitTestingData() {
       this.$router.push("/SubmitTestingData").catch((error) => {
+        if (error.name !== "NavigationDuplicated") {
+          throw error;
+        } else {
+          console.log("Navigation duplicated");
+        }
+      });
+    },
+    toAllDo() {
+      this.$router.push("/AllDo").catch((error) => {
         if (error.name !== "NavigationDuplicated") {
           throw error;
         } else {

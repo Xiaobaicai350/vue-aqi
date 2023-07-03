@@ -5,7 +5,7 @@ import Home from "@/views/Home/index.vue";
 import ListAssign from "@/views/ListAssign/index.vue";
 import SubmitTestingData from "@/views/SubmitTestingData/index.vue";
 import Login from "@/views/Login/index.vue";
-
+import AllDo from "@/views/AllDo/index.vue";
 Vue.use(VueRouter);
 
 const routes = [
@@ -28,6 +28,11 @@ const routes = [
         path: "/SubmitTestingData",
         name: "SubmitTestingData",
         component: SubmitTestingData,
+      },
+      {
+        path: "/AllDo",
+        name: "AllDo",
+        component: AllDo,
       },
     ],
   },

@@ -40,7 +40,7 @@
 </template>
 
 <script>
-// import { login } from "@/apis/admin.js";
+import { login } from "@/apis/aqi.js";
 
 export default {
   name: "Login",
@@ -49,9 +49,9 @@ export default {
       // 表单信息
       loginForm: {
         // 账户数据
-        id: "123456",
+        id: "996",
         // 密码数据
-        password: "123456",
+        password: "996",
       },
       // 表单验证
       rules: {
@@ -69,9 +69,9 @@ export default {
         password: [
           { required: true, message: "请输入密码", trigger: "blur" },
           {
-            min: 6,
+            min: 0,
             max: 15,
-            message: "长度在 6 到 15 个字符的密码",
+            message: "长度在 0 到 15 个字符的密码",
             trigger: "blur",
           },
         ],

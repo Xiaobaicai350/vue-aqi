@@ -23,10 +23,10 @@ export const listAssignedInfo = () => {
     method: "GET",
   });
 };
-//监督员登录
+//aqi人员登录
 export const login = ({ id, password }) => {
   return request({
-    url: "/admin/login",
+    url: "/staff/login",
     method: "POST",
     data: {
       id,

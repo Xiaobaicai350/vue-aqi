@@ -2,9 +2,14 @@
 <template>
   <div>
     <el-table :data="tableData" stripe style="width: 100%">
-      <el-table-column prop="date" label="日期" width="180"> </el-table-column>
-      <el-table-column prop="name" label="姓名" width="180"> </el-table-column>
-      <el-table-column prop="address" label="地址"> </el-table-column>
+      <el-table-column prop="id" label="id"> </el-table-column>
+      <el-table-column prop="address" label="区域"> </el-table-column>
+      <el-table-column prop="description" label="描述"> </el-table-column>
+      <el-table-column prop="publicName" label="举报人姓名"> </el-table-column>
+      <el-table-column prop="vAQILevel" label="预测AQI等级"> </el-table-column>
+      <el-table-column prop="updateTime" label="举报人更新时间">
+      </el-table-column>
+      <el-table-column prop="status" label="已完成状态"> </el-table-column>
     </el-table>
   </div>
 </template>

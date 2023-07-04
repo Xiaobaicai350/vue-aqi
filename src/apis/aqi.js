@@ -22,12 +22,12 @@ export const listMyAssignedInfo = () => {
 };
 
 //提交检测数据
-export const postTesting = ({ taskNumber, date, PM, SO2, CO }) => {
+export const postTesting = ({ ExMessageId, updateTime, PM, SO2, CO }) => {
   return request({
     url: "/staff/do",
     method: "POST",
     data: {
-      ExmessageId,
+      ExMessageId,
       updateTime,
       PM,
       SO2,

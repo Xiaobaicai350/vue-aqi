@@ -2,7 +2,7 @@
   <div>
     <el-form ref="form" :model="form" label-width="200px">
       <el-form-item label="任务编号">
-        <el-input v-model="form.ExmessageId"></el-input>
+        <el-input v-model="form.ExMessageId"></el-input>
       </el-form-item>
       <el-form-item label="检测日期">
         <el-col :span="11">
@@ -47,7 +47,7 @@ export default {
   data() {
     return {
       form: {
-        ExmessageId: null,
+        ExMessageId: null,
         updateTime: "",
         PM: null,
         SO2: null,

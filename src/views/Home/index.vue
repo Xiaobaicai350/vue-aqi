@@ -84,13 +84,13 @@ export default {
         tooltip: {},
         title: [
           {
-            text: "在线构建",
+            text: "贡献测试数量",
             subtext: "总计 " + builderJson.all,
             left: "25%",
             textAlign: "center",
           },
           {
-            text: "各版本下载",
+            text: "上半年贡献量",
             subtext:
               "总计 " +
               Object.keys(downloadJson).reduce(function (all, key) {
@@ -100,7 +100,7 @@ export default {
             textAlign: "center",
           },
           {
-            text: "主题下载",
+            text: "下半年贡献量",
             subtext:
               "总计 " +
               Object.keys(themeJson).reduce(function (all, key) {

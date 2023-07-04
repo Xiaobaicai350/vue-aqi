@@ -84,7 +84,7 @@ export default {
         tooltip: {},
         title: [
           {
-            text: "贡献测试数量",
+            text: "您去年贡献的的测试数量",
             subtext: "总计 " + builderJson.all,
             left: "25%",
             textAlign: "center",

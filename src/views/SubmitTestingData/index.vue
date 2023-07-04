@@ -16,13 +16,22 @@
       </el-form-item>
       <!-- 自定义 -->
       <el-form-item label="PM2.5 浓度">
-        <el-input v-model="form.PM"></el-input>
+        <!-- <el-input v-model="form.PM"></el-input> -->
+        <div class="block">
+          <el-slider v-model="form.PM" max="500" show-input> </el-slider>
+        </div>
       </el-form-item>
       <el-form-item label="二氧化硫浓度">
-        <el-input v-model="form.SO2"></el-input>
+        <!-- <el-input v-model="form.SO2"></el-input> -->
+        <div class="block">
+          <el-slider v-model="form.SO2" max="150" show-input> </el-slider>
+        </div>
       </el-form-item>
       <el-form-item label="一氧化碳浓度">
-        <el-input v-model="form.CO"></el-input>
+        <!-- <el-input v-model="form.CO"></el-input> -->
+        <div class="block">
+          <el-slider v-model="form.CO" max="2000" show-input> </el-slider>
+        </div>
       </el-form-item>
 
       <el-form-item>

@@ -3,7 +3,6 @@
   <div>
     <el-table
       :data="tableData"
-      stripe
       border
       style="width: 100%"
       :row-class-name="tableRowClassName"

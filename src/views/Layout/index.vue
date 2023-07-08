@@ -16,7 +16,7 @@
 
           <el-menu-item index="2" @click="toListAssign">
             <i class="el-icon-document"></i>
-            <span slot="title">查看委派信息</span>
+            <span slot="title">查看指派信息</span>
           </el-menu-item>
 
           <el-menu-item index="3" @click="toSubmitTestingData">

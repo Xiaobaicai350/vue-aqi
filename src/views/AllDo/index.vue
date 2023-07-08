@@ -1,18 +1,20 @@
 <template>
   <el-table :data="tableData" style="width: 100%">
-    <el-table-column prop="id" label="id"> </el-table-column>
+    <el-table-column prop="id" label="id" width="50"> </el-table-column>
     <el-table-column prop="exMessage.description" label="异常描述信息">
     </el-table-column>
     <el-table-column prop="exMessage.address" label="异常地址">
     </el-table-column>
-    <el-table-column prop="exMessage.vAQILevel" label="预估AQI等级">
+    <el-table-column prop="exMessage.vAQILevel" label="预估AQI等级" width="120">
     </el-table-column>
     <el-table-column prop="publicName" label="举报人姓名"> </el-table-column>
-    <el-table-column prop="updateTime" label="更新时间"> </el-table-column>
-    <el-table-column prop="SO2" label="SO2浓度"> </el-table-column>
-    <el-table-column prop="PM" label="PM2.5浓度"> </el-table-column>
-    <el-table-column prop="CO" label="CO浓度"> </el-table-column>
-    <el-table-column prop="aqilevel" label="实测AQI等级"> </el-table-column>
+    <el-table-column prop="updateTime" label="更新时间" width="200">
+    </el-table-column>
+    <el-table-column prop="SO2" label="SO2浓度" width="100"> </el-table-column>
+    <el-table-column prop="PM" label="PM2.5浓度" width="100"> </el-table-column>
+    <el-table-column prop="CO" label="CO浓度" width="80"> </el-table-column>
+    <el-table-column prop="aqilevel" label="实测AQI等级" width="120">
+    </el-table-column>
   </el-table>
 </template>
 
